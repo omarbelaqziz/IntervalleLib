@@ -1,11 +1,9 @@
 #pragma once
 
 namespace Tab {
-
-
 	class Tableau
 	{
-	protected:
+	private:
 		int taille;
 		float* element;
 	public:
@@ -13,10 +11,7 @@ namespace Tab {
 		~Tableau();
 		Tableau(const Tableau& T);
 		Tableau& operator=(const Tableau& T);
-		float& operator[](unsigned int indice);
-
-
-
+		float& operator[](unsigned int indice) const;
+		void print() const;
 	};
 };
-
